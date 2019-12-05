@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>VPN Managment System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <script>
+    function myFunction() {
+      var x = document.getElementById("myDIV");
+      if (x.innerHTML === "The server is On") {
+        x.innerHTML = "The server is Off";
+      } else {
+        x.innerHTML = "The server is On";
+      }
+    }
+    </script>
+  </head>
+  <body>
+
+    <!-- Navbar-->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              Status
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="index.html">Overview</a>
+              <a class="dropdown-item" href="logs.html">Log</a>
+              <a class="dropdown-item" href="#">Current Users</a>
+            </div>
+          </li>
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              Configurations
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="severnet.html">Server Network Settings</a>
+              <a class="dropdown-item" href="addserver.html">Add Server</a>
+              <a class="dropdown-item" href="addroute.html">Add Route</a>
+              <a class="dropdown-item" href="firewallsettings.html">Firewall Settings</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              User
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="users.html">Users</a>
+              <a class="dropdown-item" href="usersp.html">Users Permissions</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Servers</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--End Navbar-->
+<!-- Status Overview heading-->
+<div class="text-center mt-2">
+  <h2>Status Overview</h2>
+  <div id="myDIV">The server is On</div>
+  <div class="onoffswitch mx-auto mt-2">
+    <input type="checkbox" onclick="myFunction()" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+    <label class="onoffswitch-label" for="myonoffswitch">
+        <span class="onoffswitch-inner"></span>
+        <span class="onoffswitch-switch"></span>
+    </label>
+</div>
+</div>
+<!-- End heading-->
+
+<!-- Status table -->
+
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th >Current Configurations</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr colspan="4">
+        <td>Server name:</td>
+        <td>138.4.72.789</td>
+      </tr>
+      <tr >
+        <td>Active Users: </td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Authenticate users with </td>
+        <td>xyz</td>
+      </tr>
+      <tr>
+        <td>Port for VPN client connections:</td>
+        <td>xyz/123,abc/4567</td>
+      </tr>
+      <tr>
+        <td>Server Cipher:</td>
+        <td>ABC-DGF-GHI</td>
+      </tr>
+      <tr>
+        <td>Node:</td>
+        <td>openvpn</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- End status table-->
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>VPN Managment System</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+
+  <!-- Navbar-->
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            Status
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="index.html">Overview</a>
+            <a class="dropdown-item" href="logs.html">Log</a>
+            <a class="dropdown-item" href="#">Current Users</a>
+          </div>
+        </li>
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            Configurations
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="severnet.html">Server Network Settings</a>
+            <a class="dropdown-item" href="addserver.html">Add Server</a>
+            <a class="dropdown-item" href="addroute.html">Add Route</a>
+            <a class="dropdown-item" href="firewallsettings.html">Firewall Settings</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            User
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="users.html">Users</a>
+            <a class="dropdown-item" href="usersp.html">Users Permissions</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Servers</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!--End Navbar-->
+
+  <h2 class="mt-3 text-center">Server Netwrok Settings</h2>
+
+  <!-- Card to hold main content -->
+  <div class="card mt-2 mx-auto" style="width: 50rem;" >
+    <div class="card-body">
+      <!--form-->
+      <form class="" action="save.html" method="post">
+        <h5 class="card-title">VPN Server</h5>
+        <!--Row 1-->
+        <div class="row mt-3">
+          <div class="col">
+            <label for="ip-address">Hostname or IP Address:</label>
+          </div>
+          <div class="col">
+            <input class="rounded" type="text" name="ip-address" value="input">
+          </div>
+        </div>
+        <!--Row 2-->
+        <div class="row mt-3">
+          <div class="col">
+            <label for="i-address">Interface and IP Address</label>
+          </div>
+          <div class="col">
+            <label for="protocol">Protocol</label>
+          </div>
+        </div>
+        <!-- Selections for row 2-->
+        <div class="row ">
+          <div class="col">
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optradio">Listen on all
+                interfaces
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optradio">etho: 10.7.31.44
+              </label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optradio">TCP
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optradio">UDP
+              </label>
+            </div>
+            <div class="form-check disabled">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optradio" disabled>Both
+              </label>
+            </div>
+          </div>
+        </div>
+        <!-- End selection row -->
+        <!-- Row 3-->
+        <div class="row mt-4">
+          <div class="col">
+            <label for="port-numb">Port Number:</label>
+          </div>
+          <div class="col">
+            <input class="rounded" type="text" name="ip-address" value="input">
+          </div>
+        </div>
+        <!-- End row 3-->
+        <!--Row 4-->
+        <div class="row mt-3">
+          <div class="col">
+            <label for="i-address">Service Forwarding</label>
+          </div>
+        </div>
+        <!-- row 4 selections -->
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="">Admin Web Server
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="">Client Web Server
+          </label>
+        </div>
+        <!-- end selections -->
+        <!-- Submit button-->
+        <div class=" mt-4">
+          <div class="col text-center">
+            <button type="submit" name="button" class="btn-secondary ">Save Settings</button>
+          </div>
+        </div>
+        <!-- End submit-->
+      </form>
+      <!--end form-->
+    </div>
+  </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
